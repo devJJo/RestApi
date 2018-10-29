@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="CafeteriaSqlMap">
+	<select id="selectUser" resultType="java.util.HashMap">
+		SELECT * FROM "USER"
+	</select>
+	
+	<select id="selectUserOne" parameterType="java.util.HashMap" resultType="com.devjjo.cafeteria.model.User">
+		SELECT * 
+		FROM "USER"
+		WHERE "USER_ID" = #{P_USER_ID}
+	</select>
+	
+	<insert id="insertUser" parameterType="com.devjjo.cafeteria.model.User">
+		INSERT INTO "USER" VALUES(#{user_Id}, #{user_Nm}, #{user_Mail}, #{user_Tel}, #{Remark}, LOCALTIMESTAMP,LOCALTIMESTAMP);
+	</insert>
+	
+	<update id="updateUser" parameterType="com.devjjo.cafeteria.model.User">
+		UPDATE "USER" 
+		SET "USER_NM" = #{user_Nm}, "USER_MAIL" = #{user_Mail}, "USER_TEL"=#{user_Tel}, "REMARK" = #{Remark}, "UPD_USER_DTM" = LOCALTIMESTAMP
+		WHERE "USER_ID" = #{user_Id}
+	</update>
+	
+	<select id="delete_user" parameterType="java.util.HashMap">
+		DELETE 
+		FROM "USER" 
+		WHERE "USER_ID" = #{P_USER_ID}
+	</select>
+</mapper> 
