@@ -1,5 +1,7 @@
 # RestApi
 
+- https://devjjo.tistory.com/27 블로그 설명
+
 - RestApi Example (Spring + myBatis + PostgreSQL)
 
 - Spring Legacy Project생성 후 myBatis, PorstgreSQL 연동하여 RestApi서버 구축
