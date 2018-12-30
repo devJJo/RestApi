@@ -1,6 +1,6 @@
 # RestApi
 
-- https://devjjo.tistory.com/27 블로그 설명
+- https://devjjo.tistory.com/27 개인 블로그 설명 
 
 - RestApi Example (Spring + myBatis + PostgreSQL)
 
